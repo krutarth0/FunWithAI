@@ -3,7 +3,7 @@ export function getResponse(dispatch, parameters) {
     type: "fetching",
   });
 
-  console.log(parameters);
+  //   console.log(parameters);
   fetch(
     `https://api.openai.com/v1/engines/${parameters.engine_id}/completions`,
     {
