@@ -44,7 +44,12 @@ export default function Response({ prompt }) {
               </div>
               <div className="Response-text">
                 <p>Response:</p>
-                <p id="PromptText">{first_li.data.choices[0].text}</p>
+                {first_li.data.error ? (
+                  <p id="PromptText">{first_li.data.error.message}</p>
+                ) : (
+                  <p id="PromptText">{first_li.data.choices[0].text}</p>
+                )}
+                {/* <p id="PromptText">{first_li.data.choices[0].text}</p> */}
               </div>
               <Iclose
                 height={20}
