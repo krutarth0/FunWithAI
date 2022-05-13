@@ -10,7 +10,7 @@ export function getResponse(dispatch, parameters) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer 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`,
       },
       body: JSON.stringify({
         prompt: parameters.formData.GPTprompt,
