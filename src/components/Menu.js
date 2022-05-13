@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useResponseDispatch, useResponses } from "../contexts/FunAiProvider";
 
 export default function Menu() {
