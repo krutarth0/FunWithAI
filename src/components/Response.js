@@ -44,8 +44,8 @@ export default function Response({ prompt }) {
               </div>
               <div className="Response-text">
                 <p>Response:</p>
-                {first_li.data.error ? (
-                  <p id="PromptText">{first_li.data.error.message}</p>
+                {first_li.data.error !== undefined ? (
+                  <p id="PromptText">error : {first_li.data.error.message}</p>
                 ) : (
                   <p id="PromptText">{first_li.data.choices[0].text}</p>
                 )}
@@ -55,9 +55,7 @@ export default function Response({ prompt }) {
                 height={20}
                 width={20}
                 onClick={() => reomveResponse(first_li.data.created)}
-              >
-                {" "}
-              </Iclose>
+              ></Iclose>
             </div>
           </li>
         ) : null}
@@ -71,7 +69,12 @@ export default function Response({ prompt }) {
                   </div>
                   <div className="Response-text">
                     <p>Response:</p>
-                    <p id="PromptText">{res.data.choices[0].text}</p>
+                    {res.data.error !== undefined ? (
+                      <p id="PromptText">error : {res.data.error.message}</p>
+                    ) : (
+                      <p id="PromptText">{res.data.choices[0].text}</p>
+                    )}
+                    {/* <p id="PromptText">{res.data.choices[0].text}</p> */}
                   </div>
                   <Iclose
                     height={20}
