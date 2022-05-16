@@ -50,8 +50,8 @@ export default function Prompt({ setPromt }) {
           <label htmlFor="GPTprompt">Enter prompt</label>
           <textarea
             ref={prompt}
-            placeholder="Press Enter to submit, Shift + Enter for new line.
-You can also try a preset by using shift + down arrow, at this moment only supported for desktop :( "
+            placeholder="🗣️ Press Enter to submit, Shift + Enter for new line
+🚀 You can also try a preset by using shift + down arrow, at this moment only supported for desktop :( "
             cols="50"
             {...register("GPTprompt")}
             required
