@@ -15,6 +15,7 @@ function App() {
       <FunAiProvider>
         <Header />
         <Prompt setPromt={setPrompt} />
+
         <Response prompt={prompt} />
       </FunAiProvider>
     </main>

@@ -35,7 +35,7 @@ export default function Prompt({ setPromt }) {
           <label htmlFor="GPTprompt">Enter prompt</label>
           <textarea
             ref={prompt}
-            placeholder="Press Enter to  submit, Shift + Enter for new line"
+            placeholder="Press Enter to submit, Shift + Enter for new line"
             cols="50"
             {...register("GPTprompt")}
             required
