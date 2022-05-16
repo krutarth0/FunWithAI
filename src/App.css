@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-:root{
-  --layout-width-desktop:60%
-  --layout-width-tablet:40%
-  --layout-width-phone:60%
-}
+
 
 /* Application layout wrapper */
 .App-layout{
@@ -54,7 +50,7 @@
 
 .Header-bar h1{
   /* Kudos to utopia.fyi calculated the sizes on their eligant website */
-font-size: clamp(1.88rem, 1.27rem + 3.05vw, 3.44rem);
+font-size: clamp(2.4rem, 1.27rem + 3.05vw, 3.44rem);
 }
 
 .Header-bar .Customization{
@@ -198,9 +194,6 @@ height: 1.3rem;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* justify-content: space-between; */
-    /* background-color: aquamarine; */
-    
 }
 
 .Input-text-wrapper label{
@@ -282,7 +275,6 @@ cursor: pointer;
 .Response-bar-heading{
     display: flex;
     align-items: center;
-    /* background-color: aliceblue; */
 }
 .Response-bar-heading h2{
     display: block;
@@ -382,7 +374,6 @@ cursor: pointer;
 
 .Response .Prompt{
     display: flex;
-  /* background-color: #843de8; */
   
   }
 
@@ -429,6 +420,13 @@ flex-basis: 12%;
     flex-basis: 88%;
     margin-block-start: 0.3em;
  }
+
+
+ .word-break{
+   overflow-wrap: break-word;
+   color: #86534b;
+ }
+
 
  .Response:hover .close-response{
   opacity: 1;

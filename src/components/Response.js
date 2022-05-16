@@ -42,14 +42,16 @@ export default function Response({ prompt }) {
               <div className="Response">
                 <div className="Prompt">
                   <p>Prompt</p>
-                  <p id="PromptText">{first_li.text}</p>
+                  <p>{first_li.text}</p>
                 </div>
                 <div className="Response-text">
                   <p>Response</p>
                   {first_li.data.error !== undefined ? (
-                    <p id="PromptText">error : {first_li.data.error.message}</p>
+                    <p className="word-break">
+                      error : {first_li.data.error.message}
+                    </p>
                   ) : (
-                    <p id="PromptText">{first_li.data.choices[0].text}</p>
+                    <p>{first_li.data.choices[0].text}</p>
                   )}
                 </div>
                 <Iclose
@@ -66,14 +68,16 @@ export default function Response({ prompt }) {
                   <div className="Response">
                     <div className="Prompt">
                       <p>Prompt </p>
-                      <p id="PromptText">{res.text}</p>
+                      <p>{res.text}</p>
                     </div>
                     <div className="Response-text">
                       <p>Response </p>
                       {res.data.error !== undefined ? (
-                        <p id="PromptText">error : {res.data.error.message}</p>
+                        <p className="word-break">
+                          error : {res.data.error.message}
+                        </p>
                       ) : (
-                        <p id="PromptText">{res.data.choices[0].text}</p>
+                        <p>{res.data.choices[0].text}</p>
                       )}
                       {/* <p id="PromptText">{res.data.choices[0].text}</p> */}
                     </div>

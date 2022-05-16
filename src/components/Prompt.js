@@ -7,15 +7,30 @@ import Parameters from "./Parameters";
 export default function Prompt({ setPromt }) {
   const formRef = useRef(null);
   const prompt = useRef(null);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
 
   const dispatch = useResponseDispatch();
   const appState = useResponses();
 
   const scanForEnter = (e) => {
     if (e.keyCode === 13 && e.shiftKey === false) {
-      e.preventDefault();
       formRef.current.requestSubmit();
+    }
+
+    console.log(e.keyCode);
+    if (e.keyCode === 40 && e.shiftKey === true) {
+      dispatch({
+        type: "customizing",
+        customization: {
+          max_tokens: 60,
+          temperature: 0,
+          model: "text-davinci-002",
+        },
+      });
+      setValue(
+        "GPTprompt",
+        "Correct this to standard English:\n\nShe no went to the market."
+      );
     }
   };
 
@@ -35,7 +50,8 @@ export default function Prompt({ setPromt }) {
           <label htmlFor="GPTprompt">Enter prompt</label>
           <textarea
             ref={prompt}
-            placeholder="Press Enter to submit, Shift + Enter for new line"
+            placeholder="Press Enter to submit, Shift + Enter for new line.
+You can also try a preset by using shift + down arrow, at this moment only supported for desktop :( "
             cols="50"
             {...register("GPTprompt")}
             required
