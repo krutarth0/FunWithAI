@@ -7,8 +7,6 @@ export default function Response({ prompt }) {
   const dispatch = useResponseDispatch();
   const appState = useResponses();
 
-  // console.log(appState);
-
   const reomveResponse = (createdAt) => {
     dispatch({
       type: "remove-fetched",
@@ -17,6 +15,7 @@ export default function Response({ prompt }) {
   };
 
   //just to animate the "top push down effect" on the list
+  //using only css, instead of injecting jquery or other libraries
   const first_li = appState.responses[0] ? appState.responses[0] : null;
   const rest_li =
     appState.responses.length > 1 ? appState.responses.slice(1) : null;
@@ -39,11 +38,11 @@ export default function Response({ prompt }) {
           >
             <div className="Response">
               <div className="Prompt">
-                <p>Prompt:</p>
+                <p>Prompt</p>
                 <p id="PromptText">{first_li.text}</p>
               </div>
               <div className="Response-text">
-                <p>Response:</p>
+                <p>Response</p>
                 {first_li.data.error !== undefined ? (
                   <p id="PromptText">error : {first_li.data.error.message}</p>
                 ) : (
@@ -64,11 +63,11 @@ export default function Response({ prompt }) {
               <li key={key}>
                 <div className="Response">
                   <div className="Prompt">
-                    <p>Prompt:</p>
+                    <p>Prompt </p>
                     <p id="PromptText">{res.text}</p>
                   </div>
                   <div className="Response-text">
-                    <p>Response:</p>
+                    <p>Response </p>
                     {res.data.error !== undefined ? (
                       <p id="PromptText">error : {res.data.error.message}</p>
                     ) : (

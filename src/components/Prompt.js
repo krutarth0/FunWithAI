@@ -6,10 +6,12 @@ import Parameters from "./Parameters";
 
 export default function Prompt({ setPromt }) {
   const formRef = useRef(null);
+  const prompt = useRef(null);
   const { register, handleSubmit } = useForm();
 
   const dispatch = useResponseDispatch();
   const appState = useResponses();
+
   const scanForEnter = (e) => {
     if (e.keyCode === 13 && e.shiftKey === false) {
       e.preventDefault();
@@ -32,6 +34,7 @@ export default function Prompt({ setPromt }) {
         <div className="Input-text-wrapper">
           <label htmlFor="GPTprompt">Enter prompt</label>
           <textarea
+            ref={prompt}
             placeholder="Press Enter to  submit, Shift + Enter for new line"
             cols="50"
             {...register("GPTprompt")}
@@ -41,6 +44,17 @@ export default function Prompt({ setPromt }) {
           <div className="Submit-input-wrapper">
             <Parameters />
             <button type="submit"> Submit </button>
+            {/* <button
+              onClick={() => {
+                setValue(
+                  "GPTprompt",
+                  `${getValues("GPTprompt")}\nempy\nempy2\n`
+                );
+                setFocus("GPTprompt");
+              }}
+            >
+              {" "}
+            </button> */}
           </div>
         </div>
       </form>

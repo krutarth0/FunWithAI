@@ -14,12 +14,16 @@ export default function Menu() {
     appState.customization.max_tokens
   );
 
+  // updating app state based on the values
   const handleChange = (userinput) => {
     var customizer = {
       temperature: temprature,
       max_tokens: max_tokens,
       model: model,
     };
+
+    // caping the range to 2048 token as that are the max tokens we can inject
+    // to any GPT models
     if (userinput.target && userinput.target.name === "tokens") {
       if (userinput.target.value >= 2048) {
         customizer.max_tokens = 2048;
@@ -46,8 +50,6 @@ export default function Menu() {
       customizer.model = "text-ada-001";
       setModel("text-ada-001");
     }
-
-    // console.log(dispatch);
 
     dispatch({
       type: "customizing",

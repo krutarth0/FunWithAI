@@ -2,7 +2,6 @@ export function getResponse(dispatch, parameters) {
   dispatch({
     type: "fetching",
   });
-
   //   console.log(parameters);
   fetch(
     `https://api.openai.com/v1/engines/${parameters.engine_id}/completions`,
@@ -21,8 +20,6 @@ export function getResponse(dispatch, parameters) {
   )
     .then((res) => res.json())
     .then((data) => {
-      // var choice = data.choices[0];
-
       dispatch({
         type: "fetched",
         text: parameters.formData.GPTprompt,
@@ -30,7 +27,7 @@ export function getResponse(dispatch, parameters) {
       });
     });
 
-  // Mocking J
+  // Mocking Jay
 
   // setTimeout(() => {
   //   dispatch({

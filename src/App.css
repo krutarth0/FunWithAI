@@ -55,6 +55,8 @@ cursor: pointer;
 
 .Header-bar .Customization p {
   margin-right: 1rem;
+  /* text-decoration: underline; */
+  font-weight: 600;
 }
 
 
@@ -83,7 +85,7 @@ position: relative;
   border-radius: 0.3rem;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
   padding: 1rem;
-  background-color: #fcf5f5;
+  background-color: #ffffff;
   width: max-content;
  
 }
@@ -107,7 +109,7 @@ position: relative;
   border-radius: 0.3rem;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
   padding: 1rem;
-  background-color: #fcf5f5;;
+  background-color: #ffffff;;
 
   /* Hidden by default */
   display: none;
@@ -400,7 +402,8 @@ cursor: pointer;
 .Response{
     display: flex;
     flex-direction: column;
-
+    padding-right: 2rem;
+   
 }
 
 
@@ -434,11 +437,11 @@ flex-basis: 12%;
  }
 
  .Response:hover .close-response{
-   visibility: visible;
+  opacity: 1;
  }
 
 .Response .close-response{
-   visibility: hidden;
+   opacity: 0.3;
    position: absolute;
    right: 0;
    top: 0;

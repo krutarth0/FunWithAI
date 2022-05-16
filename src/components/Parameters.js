@@ -6,16 +6,16 @@ export default function Parameters() {
   return (
     <div className="Parameters">
       <div className="Parameters-item">
-        <p>Temprature :</p>
+        <p>Temprature: </p>
         <b>{appState.customization.temperature}</b>
       </div>
 
       <div className="Parameters-item">
-        <p>max_tokens :</p>
+        <p>max_tokens: </p>
         <b>{appState.customization.max_tokens}</b>
       </div>
       <div className="Parameters-item">
-        <p>model :</p>
+        <p>model: </p>
         <b>{appState.customization.model}</b>
       </div>
     </div>
