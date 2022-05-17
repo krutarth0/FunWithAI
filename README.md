@@ -1,16 +1,12 @@
 # THis is Fun with AI!.
 
-Hello, This is a challenge attempt for Shopify Internship. This is a fun envrionment where one can talk with OpenAI's **GTP3** models. These are super powerful models with billions of parameters, **175 B** to be exact. This app allows your to talk with these models and tickle  your mind a little
+Hello, This is a challenge attempt for Shopify Internship. This is a fun envrionment where one can talk with OpenAI's **GTP3** models. These are super powerful models with billions of parameters, **175 B** to be exact. This app allows you to talk with these models and tickle your mind a little.
 **Project link** : [Hosted on vercel](https://fun-with-ai-delta.vercel.app/)
 
 
 ## Tech stack
 
 This is a SPA with create-react-app. Made it look beautiful with plain CSS.
-
-## Switch to another file
-
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
 
 
 # Features
