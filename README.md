@@ -1,6 +1,6 @@
-# THis is Fun with AI!, A minimalistic APP.
+# THis is Fun with AI!.
 
-Hello, This is a challenge attempt for Shopify Internship. This is a fun envrionment where one can talk with OpenAI's **GTP3** models. These are super powerful models with billions of parameters, **175 B** to be exact. 
+Hello, This is a challenge attempt for Shopify Internship. This is a fun envrionment where one can talk with OpenAI's **GTP3** models. These are super powerful models with billions of parameters, **175 B** to be exact. This app allows your to talk with these models and tickle  your mind a little
 **Project link** : [Hosted on vercel](https://fun-with-ai-delta.vercel.app/)
 
 
