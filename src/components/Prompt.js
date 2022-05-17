@@ -17,7 +17,7 @@ export default function Prompt({ setPromt }) {
       formRef.current.requestSubmit();
     }
 
-    console.log(e.keyCode);
+    // console.log(e.keyCode);
     if (e.keyCode === 40 && e.shiftKey === true) {
       dispatch({
         type: "customizing",
@@ -60,17 +60,6 @@ export default function Prompt({ setPromt }) {
           <div className="Submit-input-wrapper">
             <Parameters />
             <button type="submit"> Submit </button>
-            {/* <button
-              onClick={() => {
-                setValue(
-                  "GPTprompt",
-                  `${getValues("GPTprompt")}\nempy\nempy2\n`
-                );
-                setFocus("GPTprompt");
-              }}
-            >
-              {" "}
-            </button> */}
           </div>
         </div>
       </form>

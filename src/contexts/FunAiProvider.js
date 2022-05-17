@@ -48,8 +48,8 @@ function responseReducer(currentResponses, action) {
     }
     case "remove-fetched": {
       var history = currentResponses.responses;
-      console.log(currentResponses);
-      console.log(action);
+      // console.log(currentResponses);
+      // console.log(action);
       var updated = history.filter(
         (res) => res.data.created !== action.created
       );
